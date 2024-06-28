@@ -1,0 +1,21 @@
+#Binaries
+admin-bot
+admin
+main
+adminbot-deploy-db
+adminbot-add-admin
+database/cmd/adminbot-add-admin/adminbot-add-admin
+database/cmd/adminbot-deploy-db/adminbot-deploy-db
+*.exe
+
+#Editors folders
+.idea/
+.vscode/
+
+#Config files
+*.toml
+
+#Gometalinter results
+gometalinter-results.xml
+
+.tdlib/

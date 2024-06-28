@@ -1,0 +1,16 @@
+version: '3'
+services:
+  bot:
+    build: .
+  mariadb:
+    image: mariadb:latest
+    volumes:
+      - ./compose_stuff/mysql_init:/docker-entrypoint-initdb.d
+    ports:
+      - 3306
+  mongolo:
+    image: mongo:latest  
+    environment:
+      - MONGO_INITDB_DATABASE=automod
+    volumes:
+      - ./compose_stuff/mongo_init:/docker-entrypoint-initdb.d
